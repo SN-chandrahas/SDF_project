@@ -1,5 +1,4 @@
 package myinfarith;
-
 import arbitraryarithmetic.*;
 
 public class MyInfArith {
@@ -12,7 +11,7 @@ public class MyInfArith {
         String operation = args[1];
         String num1 = args[2];
         String num2 = args[3];
-        if(type=="int"){
+        if(type.equals("int")){
             AInteger first = new AInteger(num1);
             AInteger second = new AInteger(num2);
             switch(operation) {
@@ -33,7 +32,7 @@ public class MyInfArith {
                     break;    
             }
         }
-        else if(type=="float"){
+        else if(type.equals("float")){
             AFloat first = new AFloat(num1);
             AFloat second = new AFloat(num2);
             switch(operation) {
