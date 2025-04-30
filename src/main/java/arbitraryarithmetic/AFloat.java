@@ -8,6 +8,7 @@ public class AFloat {
     public static AFloat parse(AFloat a){
         return new AFloat(a.value);
     }
+    //hi
     public static AFloat eraseleftzeroes(AFloat afloat){
         String value=afloat.value;
         int i=0;
