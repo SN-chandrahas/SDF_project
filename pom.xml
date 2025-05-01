@@ -4,15 +4,15 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Project Coordinates -->
-    <groupId>com.github.SN-chandrahas</groupId>  <!-- Group ID in reverse domain format -->
+   
+    <groupId>com.github.SN-chandrahas</groupId> 
     <artifactId>aarithmetic</artifactId>
-    <version>1.0</version>  <!-- Version of the project -->
+    <version>1.0</version>  <!-- version-->
 
-    <packaging>jar</packaging>  <!-- This tells Maven to package the project as a JAR file -->
+    <packaging>jar</packaging>  <!--jar-->
 
     <build>
-        <!-- Specify the source directory -->
+        
         <!-- <sourceDirectory>${basedir}/myinfarith</sourceDirectory>
         <resources>
             <resource>
@@ -25,14 +25,14 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
                 <configuration>
-                    <source>1.8</source>  <!-- Set the Java source version -->
-                    <target>1.8</target>  <!-- Set the Java target version -->
+                    <source>1.8</source>  <!-- java version -->
+                    <target>1.8</target>  <!--java target version -->
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
     <dependencies>
-        <!-- Add any dependencies here if your project requires them -->
+        <!-- none required-->
     </dependencies>
 </project>

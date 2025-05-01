@@ -41,10 +41,9 @@ class MyInfArith:
         self.mode = mode
         self.java_src_path = "C:/Projects/SDF_project_CS58/src/main/java"
         self.classpath = "C:/Projects/SDF_project_CS58/target/classes"
-        self.full_classname = "arbitraryarithmetic.MyInfArith"  # Use Java package name
+        self.full_classname = "arbitraryarithmetic.MyInfArith" 
 
     def compile(self):
-        # Recursively compile all Java files
         compile_cmd = [
             "javac",
             "-d", self.classpath,
@@ -64,7 +63,7 @@ class MyInfArith:
 
 def main():
     if len(sys.argv) != 5:
-        print("Usage: python script.py <mode> <operation> <num1> <num2>")
+        print("Usage: python MyInfArith.py <mode> <operation> <num1> <num2>")
         return
 
     mode = sys.argv[1]
