@@ -3,6 +3,7 @@ package arbitraryarithmetic;
 
 public class AInteger{
     public String value;
+    //this takes input with zeroes removed left side of integer
     public AInteger(String value){
         boolean isNegative = false;
 
@@ -25,6 +26,7 @@ public class AInteger{
     public static AInteger parse(AInteger a){
         return new AInteger(a.value);
     }
+    //addition function to add 2 integers
     public static AInteger add (AInteger a,AInteger b){
         if(a.value.charAt(0) == '-' && b.value.charAt(0) == '-') {
             AInteger temp = add(new AInteger(a.value.substring(1)), new AInteger(b.value.substring(1)));
@@ -69,7 +71,9 @@ public class AInteger{
         return new AInteger(finalresult);
         //return new AInteger(result);
     }
+    //subtraction function to subtract integers
     public static AInteger sub(AInteger a,AInteger b){
+        //handling negative cases
         if(a.value.charAt(0) == '-' && b.value.charAt(0) == '-') {
             return sub(new AInteger(b.value.substring(1)), new AInteger(a.value.substring(1)));
         }
@@ -127,7 +131,9 @@ public class AInteger{
         }
         return new AInteger(finalresult);
     }
+    //function to multiply 2 integers
     public static AInteger mul(AInteger a, AInteger b){
+        // handling negative cases
         if(a.value.equals("0") || b.value.equals("0")|| a.value.equals("-0") || b.value.equals("-0")) {
             return new AInteger("0");
         }
@@ -184,10 +190,11 @@ public class AInteger{
         return new AInteger(finalresult);
         //return new AInteger(result);
     }
+    //function to divide 2 integers
     public static AInteger div(AInteger a, AInteger b) {
         String dividend = a.value;
         String divisor = b.value;
-    
+        // also did checking
         if (dividend.charAt(0) == '-') {
             dividend = dividend.substring(1);
         }

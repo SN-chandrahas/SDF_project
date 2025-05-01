@@ -8,10 +8,12 @@ public class MyInfArith {
             return;
         }
         //System.out.println(AInteger.add(new AInteger("1"),new AInteger("2")));
+        //input arguments
         String type = args[0];
         String operation = args[1];
         String num1 = args[2];
         String num2 = args[3];
+        //using if conditions to execute required operations
         if(type.equals("int")){
             AInteger first = new AInteger(num1);
             AInteger second = new AInteger(num2);
