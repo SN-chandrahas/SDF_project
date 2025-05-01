@@ -63,7 +63,8 @@ class MyInfArith:
 
 def main():
     if len(sys.argv) != 5:
-        print("Usage: python MyInfArith.py <mode> <operation> <num1> <num2>")
+        print("Usage: python MyInfArith"
+        ".py <mode> <operation> <num1> <num2>")
         return
 
     mode = sys.argv[1]

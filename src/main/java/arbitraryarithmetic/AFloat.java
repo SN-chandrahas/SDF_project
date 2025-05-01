@@ -9,12 +9,14 @@ public class AFloat {
         return new AFloat(a.value);
     }
     //hi
+    //This function is to erase the extra zeroes on the left side of integer part
     public static AFloat eraseleftzeroes(AFloat afloat){
         String value=afloat.value;
         int i=0;
         while(value.charAt(i)!='.' && value.charAt(i)=='0'){
             i++;
         }
+        //if condition to fix the integer part being 0
         if(value.charAt(i)=='.'){
             return new AFloat(value.substring(i-1));
         }
@@ -465,7 +467,13 @@ public class AFloat {
             result=intpart+"."+decpart;
         }
         result=eraseleftzeroes(new AFloat(result)).value;
-        result=eraserightzeroes(new AFloat(result)).value;  
+        result=eraserightzeroes(new AFloat(result)).value;
+        if(a.value.charAt(0)=='-'&& b.value.charAt(0)!='-'){
+            return new AFloat("-"+result);
+        }
+        else if(a.value.charAt(0)!='-'&& b.value.charAt(0)=='-'){
+            return new AFloat("-"+result);
+        }  
         return new AFloat(result);
         
     }
