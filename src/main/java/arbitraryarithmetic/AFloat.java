@@ -1,5 +1,5 @@
 package arbitraryarithmetic;
-import arbitraryarithmetic.AInteger;
+//import arbitraryarithmetic.AInteger;
 public class AFloat {
     public String value;
     public AFloat(String value){
